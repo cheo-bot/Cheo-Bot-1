@@ -1073,6 +1073,7 @@ reply('http://youtube.com/neixjdndiij')
            stod = `${sender}`
 			num = await fetchJson(`https://api.telnyx.com/anonymous/v2/number_lookup/${senderNumber}`, {method: 'get'})
 fill =`   ✘✘✘     ✘✘✘\n\nhi Kak ${pushname}, ${tampilUcapan}
+*@${stod.split('@')[0]}*
 Silahkan Pilih Untuk Menampilkan Menu
 
 Jika Button Tidak Muncul Ketik .allmenu
