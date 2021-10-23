@@ -2011,18 +2011,12 @@ case "asupan3": // by itsmevall
             },
             type: 1,
           },
-          {
-            buttonId: `${prefix}mygithub`,
-            buttonText: {
-              displayText: `Follow Kak Github Saya😄`,
-            },
-            type: 1,
-          },
+        
         ]);
         break;
 case 'asupanbokep':
  get_result = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
- knnntl = `© By Diva`
+ knnntl = `© By Cheo`
   sendButVideo(from, knnntl, `Klik Next Untuk Melanjutkan`, get_result, [                      
           {
             buttonId: `${prefix}asupanbokep`,
@@ -2728,6 +2722,16 @@ break
 					const kah = apa[Math.floor(Math.random() * apa.length)]
 					denz.sendMessage(from, 'Pertanyaan : *'+apakah+'*\n\nJawaban : '+ kah, text, { quoted: mek })
 					break
+case 'apa':
+if(!isOwner && !mek.key.fromMe) return reply('khusus Owner')
+
+					const mmg =['Iya','yes','benar']
+
+					const ngnrf = apa[Math.floor(Math.random() * apa.length)]
+
+					denz.sendMessage(from, 'Pertanyaan : *'+apakah+'*\n\nJawaban : '+ ngnrf, text, { quoted: mek })
+
+					break
 				case 'rate':
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
 					rate = body.slice(1)
@@ -3109,7 +3113,7 @@ break
   │◦➛Script Ory :
   │◦➛https://github.com/dcode-denpa/bitch-boot
   │◦➛Script Recode : 
-  │◦➛minta ke owner langsung ada module nya
+  │◦➛ udh ada link github nya ya di atas
   └──────────────────❒`
  buttons = [
 {buttonId: `menu`, buttonText: {displayText: 'BACK➡️'}, type: 1},
