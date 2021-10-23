@@ -92,7 +92,7 @@ exec(`cd /sdcard/download && play *mp3`)
 			ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 			}
 			let buff = await getBuffer(ppimg)
-			masuk =`Halo autis @${num.split('@')[0]}\nSelamat Datang Di ${mdata.subject}\njgn lupa jaga prokes\n dan yg sultan bisalah donasi ketik #donasi \nthanks`
+			masuk =`Halo autis @${num.split('@')[0]}\nSelamat Datang Di ${mdata.subject}\nbaca rules ya\nsemoga betah ya\nthanks`
 			gbutsan = [{buttonId:'SERAH',buttonText:{displayText:'👋Welcome'},type:1}]
 			mhan = await denz.prepareMessage(mdata.id, buff, MessageType.image, {thumbnail: buff})
 const buttonMessages = { imageMessage: mhan.message.imageMessage,
@@ -112,7 +112,7 @@ headerType: 4 }
 			ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 			}
 			let buff = await getBuffer(ppimg)
-			keluar =`Pasti si @${num.split('@')[0]} mental nya down makanya keluar`
+			keluar =`Pasti si @${num.split('@')[0]} kena mental makanya keluar\nmakanya kalo masuk siapin mental dlu\nByee`
 			gbutsan = [{buttonId:'SERAH',buttonText:{displayText:'👋Byee'},type:1}]
 			mhan = await denz.prepareMessage(mdata.id, buff, MessageType.image, {thumbnail: buff})
 const buttonMessages = { imageMessage: mhan.message.imageMessage,
