@@ -1483,6 +1483,8 @@ headerType: 4
 denz.sendMessage(from, btnBngsat, MessageType.buttonsMessage, { quoted: ftrol, caption: menunya, contextInfo: { mentionedJid: [dtod,otod,stod]}})
                   }
 break
+		
+
 case "p":
   case "P":
     reply(`lu atheis? kalo org beragama psstiny salam :v`)
@@ -2786,6 +2788,15 @@ if(!isOwner && !mek.key.fromMe) return reply('khusus Owner')
             }
             reply(store)
             break
+case "hentai":
+
+  if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
+
+  reply(mess.wait)
+
+					atetepe = await getBuffer(`https://bx-hunter.herokuapp.com/api/nsfw/hentai?apikey=Ikyy69`) denz.sendMessage(from, atetepe, image, { quoted: mek })
+
+					break
 		    case 'fb':
 		if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
             if (!c) return reply('Linknya?')
