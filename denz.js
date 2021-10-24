@@ -1836,6 +1836,48 @@ menu = `❏ 「 \`\`\`MENU OTHER\`\`\` 」
 └ ${prefix}detikvideo [ _reply video caption angka_ ]`
 katalog(menu)
 break
+case 'memegen':
+
+   
+
+
+   if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
+
+   if (!q.includes('|')) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
+
+   try {
+
+   if (!isQuotedImage && !isQuotedSticker) return reply(`REPLY GAMBAR ATAU STICKER!!`)
+
+   reply(mess.wait)
+
+   var teks1 = q.split('|')[0] ? q.split('|')[0] : ''
+
+   var teks2 = q.split('|')[1] ? q.split('|')[1] : ''
+
+   var imgbb = require('imgbb-uploader')
+
+   var enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+
+   var media = await syaa.downloadAndSaveMediaMessage(enmedia)
+
+   var njay = await imgbb('520bd6f6209077d1777c2a4f20c509c2', media)
+
+   var resu = await getBuffer(`https://api.memegen.link/images/custom/${teks1}/${teks2}.png?background=${njay.display_url}`)
+
+   denz.sendMessage(from, resu, image, {quoted: mek})
+
+    fs.unlinkSync(media)
+
+    } catch (e) {
+
+    return reply(`${e}`)
+
+    console.log(e)
+
+    }
+
+   break
 // BIAR GAK LUPA 
 //LUPA
 case 'nuliskiri':
