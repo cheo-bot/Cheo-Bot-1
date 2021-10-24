@@ -1068,7 +1068,7 @@ reply('http://youtube.com/neixjdndiij')
         switch (command) {
         	case 'menu':
         case 'help':
-  if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
+  if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3)
         if(menusimpel == false){
            stod = `${sender}`
 			num = await fetchJson(`https://api.telnyx.com/anonymous/v2/number_lookup/${senderNumber}`, {method: 'get'})
@@ -1108,7 +1108,7 @@ sendEphemeral: false,
 "mediaType": "2",
 "mediaUrl": "https://youtu.be/JN_Gw2GzuqQ",
 "thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
+},mentionedJid:[stod]})
 }
 else if(menusimpel = true){
         stod = `${sender}`
@@ -1146,7 +1146,7 @@ break
 case 'allmenu':
   case 'menucheo':
     case 'semuamenu':
-  if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
+  if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3)
 stod = `${sender}`
        stst = await denz.getStatus(`${sender.split('@')[0]}@c.us`)
        nama = '🌹C H E O B O T🌹'
@@ -1843,7 +1843,7 @@ case 'memegen':
 
    if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
 
-   if (!q.includes('|')) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
+   if (!c.includes('|')) return reply(`Kirim perintah *${prefix + command}* teks atas|teks bawah`)
 
    try {
 
@@ -1851,9 +1851,9 @@ case 'memegen':
 
    reply(mess.wait)
 
-   var teks1 = q.split('|')[0] ? q.split('|')[0] : ''
+   var teks1 = c.split('|')[0] ? c.split('|')[0] : ''
 
-   var teks2 = q.split('|')[1] ? q.split('|')[1] : ''
+   var teks2 = c.split('|')[1] ? c.split('|')[1] : ''
 
    var imgbb = require('imgbb-uploader')
 
@@ -1861,9 +1861,9 @@ case 'memegen':
 
    var oh = await denz.downloadAndSaveMediaMessage(enmedia)
 
-   var mmm= await imgbb('520bd6f6209077d1777c2a4f20c509c2', media)
+   var mmm= await imgbb('520bd6f6209077d1777c2a4f20c509c2', oh)
 
-   var shutt= await getBuffer(`https://api.memegen.link/images/custom/${teks1}/${teks2}.png?background=${njay.display_url}`)
+   var shutt= await getBuffer(`https://api.memegen.link/images/custom/${teks1}/${teks2}.png?background=${mmm.display_url}`)
 
    denz.sendMessage(from, shutt, image, {quoted: mek})
 
