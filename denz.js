@@ -2792,9 +2792,10 @@ case "hentai":
 
   if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
 
-  reply(mess.wait)
+  if(!isGroup && !mek.key.fromMe)return reply(mess.wait)
 
-					atetepe = await getBuffer(`https://bx-hunter.herokuapp.com/api/nsfw/hentai?apikey=Ikyy69`) denz.sendMessage(from, atetepe, image, { quoted: mek })
+			atetepe = await getBuffer(`https://bx-hunter.herokuapp.com/api/nsfw/hentai?apikey=Ikyy69`) 
+			denz.sendMessage(from, atetepe, image, { quoted: mek })
 
 					break
 		    case 'fb':
