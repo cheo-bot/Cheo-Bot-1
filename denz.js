@@ -1859,7 +1859,7 @@ case 'memegen':
 
    var enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 
-   var oh = await syaa.downloadAndSaveMediaMessage(enmedia)
+   var oh = await denz.downloadAndSaveMediaMessage(enmedia)
 
    var mmm= await imgbb('520bd6f6209077d1777c2a4f20c509c2', media)
 
