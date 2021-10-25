@@ -1108,9 +1108,8 @@ sendEphemeral: false,
 "mediaType": "2",
 "mediaUrl": "https://youtu.be/JN_Gw2GzuqQ",
 "thumbnail": pporigi,
-},mentionedJid:[stod]}
-
-else if(menusimpel = true){
+},mentionedJid:[stod])
+ if(menusimpel = true){
         stod = `${sender}`
        stst = await denz.getStatus(`${sender.split('@')[0]}@c.us`)
 				stst = stst.status == 401 ? '' : stst.status
